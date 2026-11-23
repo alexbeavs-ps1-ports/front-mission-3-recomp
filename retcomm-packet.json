@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "front-mission-3-psx",
+  "name": "Front Mission 3",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "front-mission-3-recomp",
+  "rom_identity": {
+    "crc32": [
+      "8995ac68"
+    ],
+    "md5": [
+      "bbddf2958dc1208004ea97172227dd70"
+    ],
+    "sha1": [
+      "ea533c2e8cefebbd1fa196da0eb412d6544f5bbc"
+    ],
+    "disc_serials": [
+      "SLES-02423"
+    ],
+    "sizes": [
+      616837872
+    ],
+    "filenames": [
+      "Front Mission 3 (Europe).cue",
+      "Front Mission 3 (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "9bb8d963ac9700c15dd71095d967bb28a1b52bd3e1023a8f1d9c94ba824d0550"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/front-mission-3-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "front-mission-3-*-windows-x64.zip",
+      "linux-x64": "front-mission-3-*-linux-x64.zip",
+      "macos-arm64": "front-mission-3-*-macos-arm64.zip",
+      "macos-x64": "front-mission-3-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "front_mission_3.exe",
+    "linux": "front_mission_3",
+    "macos": "front_mission_3"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/front-mission-3-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

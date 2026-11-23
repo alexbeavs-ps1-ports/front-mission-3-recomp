@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Front Mission 3"
+id = "SLES-02423"
+players = 1
+exe = "disc/SLES_024.23"
+disc = "disc/Front Mission 3 (Europe).cue"
+discs = ["disc/Front Mission 3 (Europe).cue"]
+disc_serials = ["SLES-02423"]
+load_address = "0x80010000"
+entry_pc = "0x8001004C"
+text_size = "0x000D4800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Front Mission 3 (Europe).bin"
+cue_name = "Front Mission 3 (Europe).cue"
+boot_exe = "SLES_024.23"
+known_sizes = [616837872]
+known_md5 = [
+  "bbddf2958dc1208004ea97172227dd70",
+]
+known_sha1 = [
+  "ea533c2e8cefebbd1fa196da0eb412d6544f5bbc",
+]
+known_crc32 = [
+  "8995ac68",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Front Mission 3 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "9bb8d963ac9700c15dd71095d967bb28a1b52bd3e1023a8f1d9c94ba824d0550"

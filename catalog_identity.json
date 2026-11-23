@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Front Mission 3",
+    "id": "SLES-02423",
+    "boot_exe": "SLES_024.23"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Front Mission 3 (Europe).cue",
+    "bin_name": "Front Mission 3 (Europe).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 616837872,
+      "md5": "bbddf2958dc1208004ea97172227dd70",
+      "sha1": "ea533c2e8cefebbd1fa196da0eb412d6544f5bbc",
+      "crc32": "8995ac68"
+    },
+    "disc_fp": "9bb8d963ac9700c15dd71095d967bb28a1b52bd3e1023a8f1d9c94ba824d0550"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8001004C",
+    "text_size": "0x000D4800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 2582,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

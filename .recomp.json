@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Front Mission 3",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "front-mission-3-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-02423"
+  }
+}
